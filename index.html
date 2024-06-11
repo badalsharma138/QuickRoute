@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Route Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shortest Route Finder</h1>
+        <form id="routeForm">
+            <label for="source">Source Station:</label>
+            <input type="text" id="source" name="source" required>
+            <label for="destination">Destination Station:</label>
+            <input type="text" id="destination" name="destination" required>
+            <button type="submit">Find Route</button>
+        </form>
+        <div id="result">
+            <h2>Shortest Route and Cost</h2>
+            <p id="route"></p>
+            <p id="cost"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
