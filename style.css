@@ -1,15 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+:root {
+    --color-brand--1: #ffb545;
+    --color-brand--2: #00c46a;
+  
+    --color-dark--1: #2d3439;
+    --color-dark--2: #42484d;
+    --color-light--1: #aaa;
+    --color-light--2: #ececec;
+    --color-light--3: rgb(214, 222, 224);
+  }
+
+  * {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
+  }
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--color-light--2);
+    font-weight: 400;
+    line-height: 1.6;
+    height: 100vh;
+    overscroll-behavior-y: none;
+  
+    background-color: #fff;
+    padding: 2.5rem;
+  
+    display: flex;
+  }
+.sidebar {
+    flex-basis: 50rem;
+    background-color: var(--color-dark--1);
+    padding: 3rem 5rem 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  #map {
+    flex: 1;
+    height: 100%;
+    background-color: var(--color-light--1);
+  }
+
+  img {
+    width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: contain;
 }
 
-.container {
-    width: 50%;
-    margin: auto;
-    overflow: hidden;
-}
 
 h1, h2 {
     text-align: center;
@@ -50,4 +90,30 @@ button:hover {
 
 #route, #cost {
     font-size: 1.2em;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.options {
+    position: absolute;
+    z-index: 1000;
+    width: calc(100% - 2px); /* Adjusted width to account for border */
+    max-height: 200px; /* Maximum height of the dropdown */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #8b8181;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options li {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background-color: #7196e8;
 }
